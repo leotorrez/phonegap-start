@@ -1,9 +1,6 @@
 $(function(){
 $( "#calc" ).on( "pagebeforeshow", function( event, ui ) {
 ahora = new Date();
-        ahora.setTime(System.currentTimeMillis());
-        fecha.setDate(ahora);
-        dia.setDate(ahora);
     var fechanac =$('#fechanac').val();
 	var auxnac=fechanac.split("-"),
 	anonac=auxnac[0],

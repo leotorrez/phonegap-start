@@ -10,6 +10,12 @@
     <body>
         <script type="text/javascript" src="phonegap.js"></script>
         <script type="text/javascript" src="js/jquery.js"></script>
+		<script>
+		//reset type=date inputs to text
+		$( document ).bind( "mobileinit", function(){
+			$.mobile.page.prototype.options.degradeInputs.date = true;
+		});	
+	</script>
 		<script type="text/javascript" src="js/index.js"></script>
 		<script type="text/javascript" src="js/jquery-mobile.js"></script>
      <div data-role="page" id="biomachine">
@@ -24,15 +30,13 @@
                 <label for="fechanac">
                     Fecha de Nacimiento
                 </label>
-                <input name="fechanac" id="fechanac" placeholder="" value="" type="date"
-                data-mini="true">
+                <input name="fechanac" id="fechanac" placeholder="" value="" type="date"                data-mini="true">
             </div>
             <div data-role="fieldcontain">
                 <label for="fechahoy">
                     Fecha a Calcular
                 </label>
-                <input name="fechahoy" id="fechahoy" placeholder="" value="" type="date"
-                data-mini="true">
+                <input name="fechahoy" id="fechahoy" placeholder="" value="" type="date"                data-mini="true">
             </div>
             <div id="grafico" data-role="fieldcontain">
                 <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
