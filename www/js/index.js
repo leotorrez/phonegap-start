@@ -19,4 +19,33 @@ ahora = new Date();
   
   
   } );
+  
+			
+            $("#fechanac").mobiscroll($.extend({}, currentSettings, MS.fechanac));
+			$("#fechahoy").mobiscroll($.extend({}, currentSettings, MS.fechahoy));
 });
+    var currentSettings = {};
+    var MS = MS || {};
+    MS.demopage = {};
+    MS.demopage.main = false;
+    MS.demopage.name = 'date';
+    MS.demopage.component = 'datetime';
+    
+    MS.fechanac = {
+        preset: 'date',
+		theme: 'android-ics',
+        lang: 'es',
+        display: 'modal',
+        mode: 'scroller',
+        animate: 'pop',
+        dateOrder: 'D ddmmyy'
+    }
+	MS.fechahoy = {
+        preset: 'date',
+		theme: 'android-ics',
+        lang: 'es',
+        display: 'modal',
+        mode: 'scroller',
+        animate: 'pop',
+        dateOrder: 'D ddmmyy'
+    };
